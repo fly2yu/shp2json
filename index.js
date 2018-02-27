@@ -9,8 +9,8 @@ var from = require('from2');
 
 module.exports = function (inStream) {
     var id = Math.floor(Math.random() * (1<<30)).toString(16);
-    var tmpDir = path.join('/tmp', id);
-    var zipFile = path.join('/tmp', id + '.zip');
+    var tmpDir = path.join(__dirname.split("\\node_modules")[0] + '/upload', id);
+    var zipFile = path.join(__dirname.split("\\node_modules")[0] + '/upload', id + '.zip');
 
     var outStream = duplex.obj();
 
